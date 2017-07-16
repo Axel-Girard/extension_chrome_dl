@@ -1,7 +1,6 @@
 chrome.runtime.onMessage.addListener(function(message, sender, callback) {
-  alert(message);
+  alert("message");
   var b = document.querySelectorAll("ul.gallery-b li a");
-  alert(b.length);
 
   function dl(lien) {
     var link = document.createElement('a');

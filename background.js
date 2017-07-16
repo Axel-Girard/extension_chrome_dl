@@ -1,3 +1,8 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
-   chrome.tabs.sendMessage(tab.id, {"dl"});
+   chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
+     if(response !== undefined){
+       alert(response);
+       console.log(response.farewell);
+     }
+  });
 });
