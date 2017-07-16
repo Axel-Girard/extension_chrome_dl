@@ -1,0 +1,27 @@
+{
+  "background": {
+    "page": "background.js"
+  },
+
+  "content_scripts": [ {
+     "all_frames": true,
+     "js": [ "content_script.js" ],
+     "matches": [ "<all_urls>" ],
+     "run_at": "document_end"
+  } ],
+
+  "manifest_version": 2,
+
+  "name": "Download Plugin",
+  "description": "This extension will download a bunch of image",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_title": "Download bunch of images"
+  },
+
+  "permissions": [
+   "activeTab"
+   ]
+}
