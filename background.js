@@ -1,8 +1,5 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
-   chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
-     if(response !== undefined){
-       alert(response);
-       console.log(response.farewell);
-     }
-  });
+  chrome.tabs.executeScript(null, { file: "download.js" });
 });
+// executeScript    (null, { file: "file.js" });
+// insertCSS        (null, { file: "file.css" });
